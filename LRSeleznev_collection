@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "13e30eb5-c1cd-4e83-b155-6e9d08d68d8d",
+		"name": "LRSeleznev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Авторизация",
+			"item": [
+				{
+					"name": "Получить токен",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/api/account/token/admin@gmail.com/12345",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"api",
+								"account",
+								"token",
+								"admin@gmail.com",
+								"12345"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Узнать роль",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Работа с базой пользователей",
+			"item": [
+				{
+					"name": "(Auth)Все пользователи",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "(Auth) Пользователь по id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "(Auth)Пользователи с [id] услугой",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "(Admin)Пользователи с задолженностью",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "(Admin)Статистика по услугам",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Изменить дату оказания услуги",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJuYmYiOjE2MTc1Mzk4NDgsImV4cCI6MTYxNzUzOTkwOCwiaXNzIjoiTXlBdXRoU2VydmVyIiwiYXVkIjoiTXlBdXRoQ2xpZW50In0.MMLwiLUWIdGXjuxyaxGOO0KZhvbAeFpbwvY_so8JNdU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id1",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "newdate",
+									"value": "20.05.2021 20:00:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44327/api/Subscribers/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"api",
+								"Subscribers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(Admin)Добавить услуги пользователю",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ids",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44327/api/Subscribers/AddUtility",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"api",
+								"Subscribers",
+								"AddUtility"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(Admin) Добавить пользователя",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJuYmYiOjE2MTc1NDAzMzUsImV4cCI6MTYxNzU0MDM5NSwiaXNzIjoiTXlBdXRoU2VydmVyIiwiYXVkIjoiTXlBdXRoQ2xpZW50In0.Xkrnjh2QAoYbb56aTWt881tpjuOMkjBzNym-3gSAH2o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"fullname\": \"Антонов Илья Дмитриевич\",\r\n        \"passportdata\": \"3511 350235\",\r\n        \"telephonenumber\": \"8-959-111-22-00\",\r\n        \"balance\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/api/Subscribers/Addsubscriber",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"api",
+								"Subscribers",
+								"Addsubscriber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(Admin)Удалить услугу у пользователя",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "api/Subscribers/3/deleteutility/1",
+							"host": [
+								"api"
+							],
+							"path": [
+								"Subscribers",
+								"3",
+								"deleteutility",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(Admin)Удалить пользователя",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Топ по потраченной сумме",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Только любимые тарифы",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/api/Subscribers/isfavourite",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"api",
+								"Subscribers",
+								"isfavourite"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Работа с базой услуг",
+			"item": [
+				{
+					"name": "Все услуги",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Услуга по id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Изменить услугу",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/api/utilities/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"api",
+								"utilities",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Добавить услугу",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/api/utilities",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"api",
+								"utilities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить услугу",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/api/utilities/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"api",
+								"utilities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
